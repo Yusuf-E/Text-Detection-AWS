@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: com.amazonaws:aws-android-sdk-textract:2.16.12@jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-android-sdk-textract/2.16.12/20d37bbdd49b366a86138aa8a6a97686b8ebd7d/aws-android-sdk-textract-2.16.12.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-android-sdk-textract/2.16.12/2a2ce7d55637dec0b5be7048ecaed1af6f8faa54/aws-android-sdk-textract-2.16.12-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-android-sdk-textract/2.16.12/b41b650eb8f74330727a43bbf85ad49690289bba/aws-android-sdk-textract-2.16.12-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

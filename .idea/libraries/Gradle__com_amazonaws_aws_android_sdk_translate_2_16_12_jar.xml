@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: com.amazonaws:aws-android-sdk-translate:2.16.12@jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-android-sdk-translate/2.16.12/df2eff75b9563e32b45765b28aea4ece00b6e487/aws-android-sdk-translate-2.16.12.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-android-sdk-translate/2.16.12/2794614f8732efc0d3a90a435c0b3e822597f116/aws-android-sdk-translate-2.16.12-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-android-sdk-translate/2.16.12/e29232f1b5f9ec9132185b579a1d12c9393a8696/aws-android-sdk-translate-2.16.12-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

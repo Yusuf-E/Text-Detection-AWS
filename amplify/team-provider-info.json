@@ -1,0 +1,20 @@
+{
+    "dev": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-textdetection-dev-171842-authRole",
+            "UnauthRoleArn": "arn:aws:iam::168056987115:role/amplify-textdetection-dev-171842-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::168056987115:role/amplify-textdetection-dev-171842-authRole",
+            "Region": "us-east-2",
+            "DeploymentBucketName": "amplify-textdetection-dev-171842-deployment",
+            "UnauthRoleName": "amplify-textdetection-dev-171842-unauthRole",
+            "StackName": "amplify-textdetection-dev-171842",
+            "StackId": "arn:aws:cloudformation:us-east-2:168056987115:stack/amplify-textdetection-dev-171842/7249c040-d65d-11ea-8a3f-0a76b6c12f42",
+            "AmplifyAppId": "d7zl87ue7qkwo"
+        },
+        "categories": {
+            "auth": {
+                "textdetection4f71b290": {}
+            }
+        }
+    }
+}

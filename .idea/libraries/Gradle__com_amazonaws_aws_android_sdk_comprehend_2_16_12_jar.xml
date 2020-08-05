@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: com.amazonaws:aws-android-sdk-comprehend:2.16.12@jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-android-sdk-comprehend/2.16.12/c02c616ed7825c2096589ec9df1d15e169670e1b/aws-android-sdk-comprehend-2.16.12.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-android-sdk-comprehend/2.16.12/d774acaa4ea5eec6d4c76447c5e4e0acc466fed6/aws-android-sdk-comprehend-2.16.12-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-android-sdk-comprehend/2.16.12/b07c4acb3c10481537c02b57a6294df44b74538/aws-android-sdk-comprehend-2.16.12-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

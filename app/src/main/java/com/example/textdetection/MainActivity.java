@@ -2,6 +2,7 @@ package com.example.textdetection;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.res.TypedArrayUtils;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -10,23 +11,36 @@ import android.graphics.BitmapRegionDecoder;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+
+import com.amplifyframework.AmplifyException;
+import com.amplifyframework.auth.cognito.AWSCognitoAuthPlugin;
+import com.amplifyframework.core.Amplify;
+import com.amplifyframework.datastore.generated.model.Priority;
+import com.amplifyframework.datastore.generated.model.Todo;
+import com.amplifyframework.predictions.aws.AWSPredictionsPlugin;
+import com.amplifyframework.predictions.models.TextFormatType;
+import com.amplifyframework.predictions.result.IdentifyTextResult;
 
 import java.io.IOException;
 import java.net.URI;
 
 public class MainActivity extends AppCompatActivity {
-      private ImageView imageView;
-       public Uri selectedPhoto = null;
-       private Button galleryButton;
-       private Button convertButton;
-       private Button takePıcture;
+    private ImageView imageView;
+    public Uri selectedPhoto = null;
+    private Button galleryButton;
+    private Button convertButton;
+    private Button takePıcture;
+    private Bitmap bitmap;
+    TextRekognition textRekognition = new TextRekognition();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         takePıcture = ((Button) findViewById(R.id.takePhoto));
         galleryButton = ((Button)findViewById(R.id.gallery));
         takePıcture.setOnClickListener(new View.OnClickListener() {
@@ -45,6 +59,14 @@ public class MainActivity extends AppCompatActivity {
                 startActivityForResult(intent,0);
             }
         });
+        convertButton = findViewById(R.id.convert);
+        convertButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                TextRekognition textRekognition = new TextRekognition();
+                textRekognition.detectText(bitmap);
+            }
+        });
     }
 
 
@@ -56,7 +78,9 @@ public class MainActivity extends AppCompatActivity {
         if (resultCode==Activity.RESULT_OK && requestCode==0 && data!=null){
             selectedPhoto = data.getData();
             try {
-                Bitmap bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(),selectedPhoto);
+              bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(),selectedPhoto);
+//                TextRekognition textRekognition = new TextRekognition();
+//                textRekognition.detectText(bitmap);
                 imageView.setImageBitmap(bitmap);
                 convertButton.setVisibility(View.VISIBLE);
 
@@ -66,9 +90,13 @@ public class MainActivity extends AppCompatActivity {
 
         }
         if(resultCode==Activity.RESULT_OK && requestCode==1 && data != null){
-            Bitmap bitmap = ((Bitmap) data.getExtras().get("data"));
+            bitmap = ((Bitmap) data.getExtras().get("data"));
+//            TextRekognition textRekognition = new TextRekognition();
+//            textRekognition.detectText(bitmap);
             imageView.setImageBitmap(bitmap);
             convertButton.setVisibility(View.VISIBLE);
         }
     }
+
+
 }

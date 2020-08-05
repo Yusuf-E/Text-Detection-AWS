@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: com.amplifyframework:aws-predictions:1.1.1@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2b5ce111fbc81d14e97707d2ebf66707/jetified-aws-predictions-1.1.1/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2b5ce111fbc81d14e97707d2ebf66707/jetified-aws-predictions-1.1.1/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.amplifyframework/aws-predictions/1.1.1/793c79ba62c2502ad4c9734109a6270660dc5ea/aws-predictions-1.1.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
