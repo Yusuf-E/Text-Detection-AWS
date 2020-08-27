@@ -15,7 +15,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:replace="android:name">
-        <activity android:name=".TextRekog"></activity>
+        <activity android:name=".FinalActivity"></activity>
+        <activity android:name=".TextRekog" />
         <activity android:name=".SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,7 +24,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".MainActivity" />
     </application>
 
 </manifest>

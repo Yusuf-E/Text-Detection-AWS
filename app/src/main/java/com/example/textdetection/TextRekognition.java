@@ -1,17 +1,22 @@
 package com.example.textdetection;
 
 
+import android.content.Intent;
 import android.graphics.Bitmap;
+import android.os.Handler;
 import android.util.Log;
 
 import com.amplifyframework.core.Amplify;
 import com.amplifyframework.predictions.models.TextFormatType;
 import com.amplifyframework.predictions.result.IdentifyTextResult;
-public class TextRekognition {
-    private int datalength;
-    private String data,newdata="";
 
-    public void detectText(Bitmap image) {
+public class TextRekognition {
+    String newdata1 = new String();
+    private int datalength;
+    public String data,newdata="";
+
+    //    FinalActivity finalActivity = new FinalActivity();
+    public String detectText(Bitmap image) {
         Amplify.Predictions.identify(
                 TextFormatType.PLAIN,
                 image,
@@ -26,10 +31,15 @@ public class TextRekognition {
                         newdata = newdata+ascii+ "_";
                     }
                     System.out.println(newdata);
+
+
                 },
                 error -> Log.e("MyAmplifyApp", "Identify text failed", error)
         );
+
+        return newdata;
     }
+
 }
 
 

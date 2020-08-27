@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraint"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorDarkGreen"
@@ -38,13 +39,12 @@
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:layout_marginTop="32dp"
+        android:background="@drawable/rounded_button"
         android:text="Galeri"
+        android:textColor="@color/colorWhite"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/takePhoto"
-        android:background="@drawable/rounded_button"
-        android:textColor="@color/colorWhite"
-        />
+        app:layout_constraintTop_toBottomOf="@+id/takePhoto" />
 
     <ImageView
         android:id="@+id/imageView2"
@@ -55,5 +55,27 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/imageview" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/convert" />
+
+    <ProgressBar
+        android:id="@+id/progressBar2"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="210dp"
+        android:layout_marginEnd="24dp"
+        android:indeterminate="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView2"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
