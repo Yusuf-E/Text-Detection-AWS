@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
+import android.text.method.ScrollingMovementMethod;
 import android.util.Log;
 import android.widget.TextView;
 
@@ -16,9 +17,6 @@ import com.amplifyframework.predictions.result.IdentifyTextResult;
 public class FinalActivity extends AppCompatActivity {
     TextRekognition textRekognition = new TextRekognition();
     private TextView textview,asciiview;
-    private static String data1,newdata1;
-    private String data ,newdata="";
-    private int datalength;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,9 +24,12 @@ public class FinalActivity extends AppCompatActivity {
         textview = ((TextView) findViewById(R.id.textView));
        asciiview = ((TextView) findViewById(R.id.textView2));
         Bundle data=getIntent().getExtras();
-        String dataString=data.getString("asciikey");
-        asciiview.setText(dataString);
-        textview.setText(dataString);
+        String asciiString=data.getString("asciikey");
+        String dataString = data.getString("datakey");
+        asciiview.setMovementMethod(new ScrollingMovementMethod());
+        textview.setMovementMethod(new ScrollingMovementMethod());
+        asciiview.setText("Ascii:\n\n"+asciiString);
+        textview.setText("Text:\n\n"+dataString.toUpperCase());
 //        byte[] byteArray = getIntent().getByteArrayExtra("image");
 //        Bitmap image = BitmapFactory.decodeByteArray(byteArray, 0, byteArray.length);
 //        detectText(image);

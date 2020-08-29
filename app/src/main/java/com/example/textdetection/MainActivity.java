@@ -15,11 +15,13 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.provider.MediaStore;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.amplifyframework.AmplifyException;
 import com.amplifyframework.auth.cognito.AWSCognitoAuthPlugin;
@@ -42,9 +44,8 @@ public class MainActivity extends AppCompatActivity {
     private Button convertButton;
     private Button takePıcture;
     public Bitmap bitmap;
-    public int nextTime = 10000;
+    public int nextTime = 20000;
     ConstraintLayout constraintLayout;
-    private String newdata="değer değişmedi";
     TextRekognition textRekognition = new TextRekognition();
     TextView textView;
     ProgressBar progressBar;
@@ -52,10 +53,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        progressBar = ((ProgressBar) findViewById(R.id.progressBar2));
-        progressBar.setVisibility(View.INVISIBLE);
+        constraintLayout = ((ConstraintLayout) findViewById(R.id.constraint));
         takePıcture = ((Button) findViewById(R.id.takePhoto));
         galleryButton = ((Button)findViewById(R.id.gallery));
+        progressBar = ((ProgressBar) findViewById(R.id.progressBar2));
+        progressBar.setVisibility(View.INVISIBLE);
         takePıcture.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -77,19 +79,20 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                     TextRekognition textRekognition = new TextRekognition();
-
-                   newdata= textRekognition.detectText(bitmap);
-                   constraintLayout = ((ConstraintLayout) findViewById(R.id.constraint));
+                  textRekognition.detectText(bitmap);
                 progressBar.setVisibility(View.VISIBLE);
+                activate(false);
+                Toast toast = Toast.makeText(getApplicationContext(), "Dönüştürme işlemi tamamlananıyor..", Toast.LENGTH_LONG);
+                toast.show();
                 new Handler().postDelayed(new Runnable() {
                     @Override
                     public void run() {
-                        textView = findViewById(R.id.textView3);
-                        textView.setText(textRekognition.newdata);
                         Intent next = new Intent(MainActivity.this,FinalActivity.class);
                         next.putExtra("asciikey",textRekognition.newdata);
+                        next.putExtra("datakey",textRekognition.data);
                         System.out.println(textRekognition.newdata);
                         progressBar.setVisibility(View.INVISIBLE);
+                        activate(true);
                         startActivity(next);
                     }
                 },nextTime);
@@ -97,8 +100,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-
-
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -116,7 +117,6 @@ public class MainActivity extends AppCompatActivity {
             } catch (IOException e) {
                 e.printStackTrace();
             }
-
         }
         if(resultCode==Activity.RESULT_OK && requestCode==1 && data != null){
             bitmap = ((Bitmap) data.getExtras().get("data"));
@@ -126,8 +126,18 @@ public class MainActivity extends AppCompatActivity {
             convertButton.setVisibility(View.VISIBLE);
         }
     }
-    public void toFinalActivity(){
-        Intent toActivity = new Intent(MainActivity.this,FinalActivity.class);
-        startActivity(toActivity);
+    public void activate(boolean data){
+        if(data==false){
+            constraintLayout.setAlpha((float) 0.4);
+            convertButton.setClickable(false);
+            galleryButton.setClickable(false);
+            takePıcture.setClickable(false);
+        }
+        else{
+            constraintLayout.setAlpha((float) 1);
+            convertButton.setClickable(true);
+            galleryButton.setClickable(true);
+            takePıcture.setClickable(true);
+        }
     }
 }

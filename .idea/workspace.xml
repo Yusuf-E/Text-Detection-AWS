@@ -11,8 +11,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5e0b1ac5-9440-4e28-964d-d2397a0671b2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/textdetection/FinalActivity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_final.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.bin" afterDir="false" />
@@ -23,20 +21,33 @@
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/javaCompile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/app/app.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/textdetection/FinalActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/textdetection/FinalActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/textdetection/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/textdetection/MainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/textdetection/TextRekognition.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/textdetection/TextRekognition.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/rounded_button.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/rounded_button.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_final.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_final.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_splash.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_splash.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="Pixel_3a_API_30_x86" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="5203f8bffa36144f" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -90,6 +101,9 @@
     </key>
     <key name="android.template.-1187537158">
       <recent name="com.example.textdetection" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Projects\Android\TextDetection\app\src\main\res\drawable" />
     </key>
     <key name="android.template.-2036279635">
       <recent name="com.example.textdetection" />
@@ -218,30 +232,38 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="574" y="122" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1598551372756" />
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1598717639116">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1598717639116" />
+    <state x="349" y="167" key="AndroidCreateResourceDirectoryDialog" timestamp="1598714251962">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="349" y="167" key="AndroidCreateResourceDirectoryDialog/0.0.1536.824@0.0.1536.824" timestamp="1598714251962" />
     <state x="349" y="167" key="AndroidCreateResourceFileDialog" timestamp="1596114977303">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="349" y="167" key="AndroidCreateResourceFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1596114977303" />
-    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1596147531713">
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1598567168957">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1596147531713" />
-    <state width="1491" height="260" key="GridCell.Tab.0.bottom" timestamp="1598556671530">
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1598567168957" />
+    <state width="1491" height="155" key="GridCell.Tab.0.bottom" timestamp="1598719059412">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1491" height="260" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1598556671530" />
-    <state width="1491" height="260" key="GridCell.Tab.0.center" timestamp="1598556671529">
+    <state width="1491" height="155" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1598719059412" />
+    <state width="1491" height="155" key="GridCell.Tab.0.center" timestamp="1598719059412">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1491" height="260" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1598556671529" />
-    <state width="1491" height="260" key="GridCell.Tab.0.left" timestamp="1598556671529">
+    <state width="1491" height="155" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1598719059412" />
+    <state width="1491" height="155" key="GridCell.Tab.0.left" timestamp="1598719059412">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1491" height="260" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1598556671529" />
-    <state width="1491" height="260" key="GridCell.Tab.0.right" timestamp="1598556671530">
+    <state width="1491" height="155" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1598719059412" />
+    <state width="1491" height="155" key="GridCell.Tab.0.right" timestamp="1598719059412">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1491" height="260" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1598556671530" />
+    <state width="1491" height="155" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1598719059412" />
     <state width="1491" height="260" key="GridCell.Tab.1.bottom" timestamp="1598556671531">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -266,9 +288,9 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="584" y="190" key="chooseDestDirectoryDialog/0.0.1536.824@0.0.1536.824" timestamp="1596116698028" />
-    <state x="636" y="253" key="com.intellij.ide.util.TipDialog" timestamp="1598550299338">
+    <state x="636" y="253" key="com.intellij.ide.util.TipDialog" timestamp="1598707705374">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="636" y="253" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1598550299338" />
+    <state x="636" y="253" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1598707705374" />
   </component>
 </project>
