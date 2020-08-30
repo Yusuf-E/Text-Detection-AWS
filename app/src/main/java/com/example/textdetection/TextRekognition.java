@@ -26,7 +26,6 @@ public class TextRekognition {
     public String data,newdata="";
     public Bitmap imagedata;
     private MainActivity MainActivity;
-
     //    FinalActivity finalActivity = new FinalActivity();
     public  int detectText(Bitmap image) {
         booldata=2;
@@ -46,8 +45,6 @@ public class TextRekognition {
                      }
                      System.out.println(newdata);
                      booldata=1;
-
-
                  },
                  error -> {
                      System.out.println("Burdan kapandi");
@@ -57,11 +54,4 @@ public class TextRekognition {
          );
         return booldata;
     }
-
 }
-
-
-
-
-
-
