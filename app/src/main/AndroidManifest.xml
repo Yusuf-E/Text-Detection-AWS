@@ -14,8 +14,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:replace="android:name">
-        <activity android:name=".FinalActivity">
-            android:screenOrientation="portrait"
+        <activity android:name=".FinalActivity"
+            android:screenOrientation="portrait">
         </activity>
         <activity android:name=".SplashActivity"
             android:screenOrientation="portrait">

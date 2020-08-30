@@ -30,6 +30,7 @@ public class FinalActivity extends AppCompatActivity {
         textview.setMovementMethod(new ScrollingMovementMethod());
         asciiview.setText("Ascii:\n\n"+asciiString);
         textview.setText("Text:\n\n"+dataString.toUpperCase());
+        System.out.println(dataString.length());
 //        byte[] byteArray = getIntent().getByteArrayExtra("image");
 //        Bitmap image = BitmapFactory.decodeByteArray(byteArray, 0, byteArray.length);
 //        detectText(image);

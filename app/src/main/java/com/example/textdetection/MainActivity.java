@@ -6,6 +6,9 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.content.res.TypedArrayUtils;
 
 import android.app.Activity;
+import android.app.AlarmManager;
+import android.app.PendingIntent;
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapRegionDecoder;
@@ -31,10 +34,13 @@ import com.amplifyframework.datastore.generated.model.Todo;
 import com.amplifyframework.predictions.aws.AWSPredictionsPlugin;
 import com.amplifyframework.predictions.models.TextFormatType;
 import com.amplifyframework.predictions.result.IdentifyTextResult;
+import com.jakewharton.processphoenix.ProcessPhoenix;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.net.URI;
+import java.util.Timer;
+import java.util.TimerTask;
 
 public class MainActivity extends AppCompatActivity {
     ByteArrayOutputStream stream = new ByteArrayOutputStream();
@@ -44,7 +50,8 @@ public class MainActivity extends AppCompatActivity {
     private Button convertButton;
     private Button takePıcture;
     public Bitmap bitmap;
-    public int nextTime = 20000;
+    public int nextTime = 30000;
+    public String newdata;
     ConstraintLayout constraintLayout;
     TextRekognition textRekognition = new TextRekognition();
     TextView textView;
@@ -78,24 +85,50 @@ public class MainActivity extends AppCompatActivity {
         convertButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                    TextRekognition textRekognition = new TextRekognition();
-                  textRekognition.detectText(bitmap);
+                textRekognition.newdata="";
+                Timer timer=new Timer();
                 progressBar.setVisibility(View.VISIBLE);
                 activate(false);
                 Toast toast = Toast.makeText(getApplicationContext(), "Dönüştürme işlemi tamamlananıyor..", Toast.LENGTH_LONG);
                 toast.show();
-                new Handler().postDelayed(new Runnable() {
+                textRekognition.detectText(bitmap);
+                timer.scheduleAtFixedRate(new TimerTask(){
                     @Override
-                    public void run() {
-                        Intent next = new Intent(MainActivity.this,FinalActivity.class);
-                        next.putExtra("asciikey",textRekognition.newdata);
-                        next.putExtra("datakey",textRekognition.data);
-                        System.out.println(textRekognition.newdata);
-                        progressBar.setVisibility(View.INVISIBLE);
-                        activate(true);
-                        startActivity(next);
+                    public void run(){
+                       if (textRekognition.newdata!=""){
+                           Intent next = new Intent(MainActivity.this,FinalActivity.class);
+                           next.putExtra("asciikey",textRekognition.newdata);
+                           next.putExtra("datakey",textRekognition.data);
+                           System.out.println(textRekognition.newdata);
+                           progressBar.setVisibility(View.INVISIBLE);
+                           activate(true);
+                           timer.cancel();
+                           startActivity(next);
+
+                       }
+                        if (textRekognition.booldata==0){
+                               PendingIntent pendingIntent = PendingIntent.getActivity(MainActivity.this,1000,getIntent(),PendingIntent.FLAG_CANCEL_CURRENT);
+                               AlarmManager alarmManager = ((AlarmManager) getSystemService(Context.ALARM_SERVICE));
+                                  alarmManager.set(AlarmManager.RTC,System.currentTimeMillis()+5000,pendingIntent);
+                            System.exit(0);
+                        }
+//                       if(textRekognition.booldata==0){
+//                           runOnUiThread(new Runnable() {
+//                               public void run() {
+//                               final Toast toast = Toast.makeText(getApplicationContext(), "AWS SIÇTI", Toast.LENGTH_LONG);
+//                                 toast.show();
+//
+//                               }
+//                           });
+//                       }
                     }
-                },nextTime);
+                },0,500);
+//                new Handler().postDelayed(new Runnable() {
+//                    @Override
+//                    public void run() {
+//
+//                    }
+//                },nextTime);
 
             }
         });

@@ -53,4 +53,5 @@ dependencies {
     implementation 'com.amplifyframework:aws-api:1.1.1'
     implementation 'com.amplifyframework:aws-predictions:1.1.1'
     implementation 'com.amplifyframework:aws-auth-cognito:1.1.1'
+    implementation 'com.jakewharton:process-phoenix:2.0.0'
 }
