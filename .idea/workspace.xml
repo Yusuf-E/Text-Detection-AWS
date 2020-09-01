@@ -11,12 +11,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5e0b1ac5-9440-4e28-964d-d2397a0671b2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/app/app.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/textdetection/FinalActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/textdetection/FinalActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/textdetection/TextRekognition.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/textdetection/TextRekognition.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_final.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_final.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -264,21 +260,9 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="584" y="190" key="chooseDestDirectoryDialog/0.0.1536.824@0.0.1536.824" timestamp="1596116698028" />
-    <state x="636" y="253" key="com.intellij.ide.util.TipDialog" timestamp="1598803564871">
+    <state x="636" y="253" key="com.intellij.ide.util.TipDialog" timestamp="1599000302307">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="636" y="253" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1598803564871" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="java-method">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/textdetection/MainActivity.java</url>
-          <line>86</line>
-          <properties method="onClick" />
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <state x="636" y="253" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1599000302307" />
   </component>
 </project>
