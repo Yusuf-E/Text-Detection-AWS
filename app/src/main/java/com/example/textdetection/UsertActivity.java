@@ -3,7 +3,6 @@ package com.example.textdetection;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
-import androidx.core.content.res.TypedArrayUtils;
 
 import android.app.Activity;
 import android.app.AlarmManager;
@@ -11,14 +10,9 @@ import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
-import android.graphics.BitmapRegionDecoder;
 import android.net.Uri;
-import android.os.AsyncTask;
 import android.os.Bundle;
-import android.os.Handler;
 import android.provider.MediaStore;
-import android.util.Log;
-import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -26,23 +20,12 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.amplifyframework.AmplifyException;
-import com.amplifyframework.auth.cognito.AWSCognitoAuthPlugin;
-import com.amplifyframework.core.Amplify;
-import com.amplifyframework.datastore.generated.model.Priority;
-import com.amplifyframework.datastore.generated.model.Todo;
-import com.amplifyframework.predictions.aws.AWSPredictionsPlugin;
-import com.amplifyframework.predictions.models.TextFormatType;
-import com.amplifyframework.predictions.result.IdentifyTextResult;
-import com.jakewharton.processphoenix.ProcessPhoenix;
-
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
-import java.net.URI;
 import java.util.Timer;
 import java.util.TimerTask;
 
-public class MainActivity extends AppCompatActivity {
+public class UsertActivity extends AppCompatActivity {
     ByteArrayOutputStream stream = new ByteArrayOutputStream();
     private ImageView imageView;
     public Uri selectedPhoto = null;
@@ -96,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void run(){
                        if (textRekognition.newdata!=""){
-                           Intent next = new Intent(MainActivity.this,FinalActivity.class);
+                           Intent next = new Intent(UsertActivity.this,FinalActivity.class);
                            next.putExtra("asciikey",textRekognition.newdata);
                            next.putExtra("datakey",textRekognition.data);
                            System.out.println(textRekognition.newdata);
@@ -107,7 +90,7 @@ public class MainActivity extends AppCompatActivity {
 
                        }
                         if (textRekognition.booldata==0){
-                               PendingIntent pendingIntent = PendingIntent.getActivity(MainActivity.this,1000,getIntent(),PendingIntent.FLAG_CANCEL_CURRENT);
+                               PendingIntent pendingIntent = PendingIntent.getActivity(UsertActivity.this,1000,getIntent(),PendingIntent.FLAG_CANCEL_CURRENT);
                                AlarmManager alarmManager = ((AlarmManager) getSystemService(Context.ALARM_SERVICE));
                                   alarmManager.set(AlarmManager.RTC,System.currentTimeMillis()+5000,pendingIntent);
                             System.exit(0);

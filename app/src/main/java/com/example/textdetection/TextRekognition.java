@@ -1,31 +1,19 @@
 package com.example.textdetection;
 
 
-import android.app.AlarmManager;
-import android.app.PendingIntent;
-import android.content.ComponentName;
-import android.content.Intent;
-import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
-import android.os.AsyncTask;
-import android.os.Handler;
 import android.util.Log;
-import android.view.View;
-import android.widget.Toast;
-
-import androidx.core.content.IntentCompat;
 
 import com.amplifyframework.core.Amplify;
 import com.amplifyframework.predictions.models.TextFormatType;
 import com.amplifyframework.predictions.result.IdentifyTextResult;
-import com.jakewharton.processphoenix.ProcessPhoenix;
 
 public class TextRekognition {
     String newdata1 = new String();
    public int datalength,booldata;
     public String data,newdata="";
     public Bitmap imagedata;
-    private MainActivity MainActivity;
+    private UsertActivity UsertActivity;
     //    FinalActivity finalActivity = new FinalActivity();
     public  int detectText(Bitmap image) {
         booldata=2;
